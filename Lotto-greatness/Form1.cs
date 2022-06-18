@@ -67,6 +67,12 @@ namespace Lotto_greatness
             label4.Text = seq[4].ToString();
             label5.Text = seq[5].ToString();
             label6.Text = seq[6].ToString();
+
+
+            // Set the button state to Done
+            BtnPick.Enabled = false;
+            BtnReset.Enabled = true;
         }
+
     }
 }
