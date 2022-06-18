@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 54);
+            this.label1.Location = new System.Drawing.Point(287, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 96);
+            this.label2.Location = new System.Drawing.Point(246, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 132);
+            this.label3.Location = new System.Drawing.Point(205, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 2;
@@ -70,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 167);
+            this.label4.Location = new System.Drawing.Point(164, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -79,7 +79,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 206);
+            this.label5.Location = new System.Drawing.Point(123, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
@@ -88,7 +88,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 266);
+            this.label6.Location = new System.Drawing.Point(82, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 5;
@@ -96,28 +96,34 @@
             // 
             // BtnPick
             // 
-            this.BtnPick.Location = new System.Drawing.Point(234, 54);
+            this.BtnPick.AutoSize = true;
+            this.BtnPick.Location = new System.Drawing.Point(82, 62);
             this.BtnPick.Name = "BtnPick";
-            this.BtnPick.Size = new System.Drawing.Size(75, 23);
+            this.BtnPick.Size = new System.Drawing.Size(128, 23);
             this.BtnPick.TabIndex = 6;
             this.BtnPick.Text = "Get My Lucky Numbers";
             this.BtnPick.UseVisualStyleBackColor = true;
+            this.BtnPick.Click += new System.EventHandler(this.BtnPick_Click);
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(439, 54);
+            this.BtnReset.Location = new System.Drawing.Point(247, 62);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(75, 23);
             this.BtnReset.TabIndex = 7;
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::Lotto_greatness.Properties.Resources.icons8_lottery_64;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 96);
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -125,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(379, 170);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnPick);
@@ -135,8 +141,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Lotto Number Picker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
